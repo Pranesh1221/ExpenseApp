@@ -26,7 +26,7 @@ const Dashboard = () => {
         source={require("../../../assets/extra-large.jpg")}
       />
       <View style={styles.Main}>
-        <Pressable style={styles.Card}>
+        <Pressable   style={styles.Card}>
           <FontAwesome name="credit-card-alt" size={40} color="#008fd3" />
           <Text style={styles.Tests}>Expenses</Text>
           <Text style={styles.smallText}>List of your Expenses</Text>

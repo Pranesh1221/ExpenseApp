@@ -8,6 +8,7 @@ import ExpenseForm from "../screens/ExpenseForm/ExpenseForm";
 import { NavigationContainer } from "@react-navigation/native";
 import Dashboard from "../screens/Dashboard/Dashboard";
 
+
 import { User } from "../Modal/User";
 import Signin from "../screens/SignIn/SignIn";
 import Login from "../screens/Login/Login";
@@ -88,6 +89,7 @@ const StackNavigation = () => {
               headerShown: false,
             }}
           />
+         
         </Stack.Navigator>
       </NavigationContainer>
     </>
