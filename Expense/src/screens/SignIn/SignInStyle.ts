@@ -12,10 +12,10 @@ export const styles = StyleSheet.create({
     color: "#008fd3",
   },
   imagebox: {
-    width: 80,
-    height: 80,
+    width: 60,
+    height: 60,
     marginLeft: 250,
-    marginTop: -65,
+    marginTop: -50,
   },
 
   buttonContainer: {
