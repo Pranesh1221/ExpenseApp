@@ -3,11 +3,10 @@ import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import { styles } from "./SignInStyle";
 import { useNavigation } from "@react-navigation/native";
+import Login from "../Login/Login";
 const Signin = () => {
   const navigation = useNavigation();
-  const goToLogin = () => {
-    navigation.navigate();
-  };
+
   return (
     <View style={[styles.mainbox]}>
       <Text style={[styles.text]}>SAP Concur</Text>
@@ -18,7 +17,10 @@ const Signin = () => {
         />
       </View>
 
-      <TouchableOpacity style={[styles.buttonContainer]} onPress={goToLogin}>
+      <TouchableOpacity
+        style={[styles.buttonContainer]}
+        onPress={() => navigation.navigate("Login")}
+      >
         <Text
           style={[
             {

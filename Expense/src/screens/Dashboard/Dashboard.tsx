@@ -18,9 +18,35 @@ const Dashboard = () => {
       },
     });
   }, []);
-  return <></>;
+  return (
+    <View style={styles.Main}>
+      <View style={styles.Card}>
+        <Text>Expenses</Text>
+      </View>
+      <View style={styles.Card}>
+        <Text>Expenses Claims</Text>
+      </View>
+      <View style={styles.Card}>
+        <Text>Approvals</Text>
+      </View>
+      <View style={styles.Card}>
+        <Text>Requests</Text>
+      </View>
+    </View>
+  );
 };
 
 export default Dashboard;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  Main: {
+    flex: 1,
+    flexDirection: "row",
+  },
+  Card: {
+    flex: 1,
+    height: 150,
+    width: 100,
+    borderWidth: 2,
+  },
+});

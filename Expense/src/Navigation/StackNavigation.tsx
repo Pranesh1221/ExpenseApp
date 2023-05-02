@@ -7,8 +7,10 @@ import { AntDesign, Entypo, Ionicons } from "@expo/vector-icons";
 import ExpenseForm from "../screens/ExpenseForm/ExpenseForm";
 import { NavigationContainer } from "@react-navigation/native";
 import Dashboard from "../screens/Dashboard/Dashboard";
-import Login from "../screens/Login/Login";
+
 import { User } from "../Modal/User";
+import Signin from "../screens/SignIn/SignIn";
+import Login from "../screens/Login/Login";
 const StackNavigation = () => {
   const [email, setEmail] = useState("");
   const Tab = createBottomTabNavigator();
@@ -65,6 +67,20 @@ const StackNavigation = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen
+            name="SignIn"
+            component={Signin}
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{
+              headerShown: false,
+            }}
+          />
           <Stack.Screen
             name="Expense App"
             component={BottomTabs}
