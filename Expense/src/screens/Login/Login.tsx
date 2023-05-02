@@ -54,12 +54,7 @@ const Login = (props: Props) => {
       >
         <Text
           style={[
-            {
-              textTransform: "uppercase",
-              fontWeight: "bold",
-              fontSize: 22,
-              marginBottom: 20,
-            },
+          styles.screenName
           ]}
         >
           Login
@@ -84,12 +79,7 @@ const Login = (props: Props) => {
         >
           <Text
             style={[
-              {
-                textTransform: "uppercase",
-                color: "#fafafa",
-                fontWeight: "bold",
-                fontSize: 18,
-              },
+             styles.loginButton
             ]}
           >
             LOGIN

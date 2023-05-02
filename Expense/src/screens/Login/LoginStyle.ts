@@ -25,4 +25,18 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     marginTop: 20,
   },
+  screenName: {
+
+    textTransform: "uppercase",
+    fontWeight: "bold",
+    fontSize: 22,
+    marginBottom: 20,
+
+  },
+  loginButton: {
+    textTransform: "uppercase",
+    color: "#fafafa",
+    fontWeight: "bold",
+    fontSize: 18,
+  }
 });
