@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Expenselt from "../screens/Expenselt/Expenselt";
@@ -7,7 +7,10 @@ import { AntDesign, Entypo, Ionicons } from "@expo/vector-icons";
 import ExpenseForm from "../screens/ExpenseForm/ExpenseForm";
 import { NavigationContainer } from "@react-navigation/native";
 import Dashboard from "../screens/Dashboard/Dashboard";
+import Login from "../screens/Login/Login";
+import { User } from "../Modal/User";
 const StackNavigation = () => {
+  const [email, setEmail] = useState("");
   const Tab = createBottomTabNavigator();
   const Stack = createNativeStackNavigator();
   function BottomTabs() {
@@ -59,17 +62,19 @@ const StackNavigation = () => {
     );
   }
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Expense App"
-          component={BottomTabs}
-          options={{
-            headerShown: false,
-          }}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Expense App"
+            component={BottomTabs}
+            options={{
+              headerShown: false,
+            }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 };
 
