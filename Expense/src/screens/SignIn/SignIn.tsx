@@ -9,12 +9,12 @@ const Signin = () => {
 
   return (
     <View style={[styles.mainbox]}>
-      <Text style={[styles.text]}>SAP Concur</Text>
+      <Text style={[styles.text]}>Expense App</Text>
       <View>
-        <Image
+        {/* <Image
           style={[styles.imagebox]}
           source={require("../../../assets/logo.png")}
-        />
+        /> */}
       </View>
 
       <TouchableOpacity
