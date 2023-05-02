@@ -8,10 +8,13 @@ import ExpenseForm from "../screens/ExpenseForm/ExpenseForm";
 import { NavigationContainer } from "@react-navigation/native";
 import Dashboard from "../screens/Dashboard/Dashboard";
 
-
 import { User } from "../Modal/User";
 import Signin from "../screens/SignIn/SignIn";
 import Login from "../screens/Login/Login";
+import ListExpenses from "../screens/ListExpenses/ListExpenses";
+import ReviewExpenses from "../screens/ReviewExpenses/ReviewExpenses";
+import ApprovalExpenses from "../screens/ApprovalExpenses/ApprovalExpenses";
+import Request from "../screens/Request/Request";
 const StackNavigation = () => {
   const [email, setEmail] = useState("");
   const Tab = createBottomTabNavigator();
@@ -89,7 +92,34 @@ const StackNavigation = () => {
               headerShown: false,
             }}
           />
-         
+          <Stack.Screen
+            name="Expenses"
+            component={ListExpenses}
+            options={{
+              headerShown: true,
+            }}
+          />
+          <Stack.Screen
+            name="Claims"
+            component={ReviewExpenses}
+            options={{
+              headerShown: true,
+            }}
+          />
+          <Stack.Screen
+            name="Approvals"
+            component={ApprovalExpenses}
+            options={{
+              headerShown: true,
+            }}
+          />
+          <Stack.Screen
+            name="Requests"
+            component={Request}
+            options={{
+              headerShown: true,
+            }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
