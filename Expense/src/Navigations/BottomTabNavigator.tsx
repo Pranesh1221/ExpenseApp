@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import DashBoard from "../screen/DashBoard/DashBoard";
@@ -7,14 +7,14 @@ import ExpenseCreate from "../screen/ExpenseCreate/ExpenseCreate";
 import { Entypo, Ionicons } from "@expo/vector-icons";
 import DrawerNavigation from "./DrawerNavigation";
 import { COLORS } from "../constants";
+import { useNavigation } from "@react-navigation/native";
 
 const BottomTabNavigator = () => {
+  const navigation = useNavigation();
   const Tab = createBottomTabNavigator();
   return (
     <Tab.Navigator
-
       screenOptions={({ route }) => ({
-       
         headerShown: false,
         tabBarInactiveTintColor: "white",
         tabBarStyle: [
@@ -55,6 +55,14 @@ const BottomTabNavigator = () => {
           tabBarActiveTintColor: "white",
           tabBarIcon: ({ color }) => (
             <Entypo name="plus" size={24} color="white" />
+          ),
+          headerLeft: () => (
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Expense")}
+              style={{ marginLeft: 10 }}
+            >
+              <Ionicons name="arrow-back" size={24} color="white" />
+            </TouchableOpacity>
           ),
         }}
       />

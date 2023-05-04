@@ -6,19 +6,18 @@ const styles = StyleSheet.create({
     // paddingTop: StatusBar.currentHeight,
   },
   AddReceiptButton: {
-    height: 100,
+    height: 250,
     backgroundColor: "#008fd3",
-
   },
-  AddReceiptIcon:{
-  flex:1,
-  justifyContent:"center",
-  alignItems:"center"
+  AddReceiptIcon: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
   },
-  AddReceiptText:{
-  color:"white",
-  fontSize:18,
-  fontWeight:"bold"
+  AddReceiptText: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "bold",
   },
   amountBox: {
     width: 100,
@@ -117,16 +116,16 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     width: "94%",
     marginLeft: 15,
-    marginTop:-10
+    marginTop: -10,
   },
-  buttonContainer:{
+  buttonContainer: {
     width: "100%",
     padding: 8,
     backgroundColor: "#737575",
     justifyContent: "center",
     alignItems: "center",
     marginTop: 20,
-  }
+  },
 });
 
 export default styles;

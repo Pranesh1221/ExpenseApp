@@ -9,12 +9,10 @@ import Help from "../screen/Help/Help";
 import SignOut from "../screen/SignOut/SignOut";
 import { FontAwesome5, Ionicons } from "@expo/vector-icons";
 
-
 const DrawerNavigation = () => {
   const Drawer = createDrawerNavigator();
   return (
     <Drawer.Navigator
-  
       useLegacyImplementation={true}
       initialRouteName="DashBoard"
       screenOptions={{

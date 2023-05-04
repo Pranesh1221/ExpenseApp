@@ -17,10 +17,19 @@ const Stack = createStackNavigator();
 // This Stack Contains Navigator,Screen,Group
 const AuthNavigator = () => {
   return (
-    <Stack.Navigator initialRouteName="Signin">
-      <Stack.Screen name="Signin" component={Signin}  options={{
+    <Stack.Navigator
+      initialRouteName="Signin"
+      screenOptions={{
+        headerTintColor: "white",
+      }}
+    >
+      <Stack.Screen
+        name="Signin"
+        component={Signin}
+        options={{
           headerShown: false,
-        }}/>
+        }}
+      />
       <Stack.Screen name="Login" component={Login} />
 
       <Stack.Screen name="Forgot Password" component={ForgetPassword} />
@@ -34,33 +43,33 @@ const AuthNavigator = () => {
         }}
       />
       <Stack.Screen
-            name="Expenses"
-            component={ListExpense}
-            options={{
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen
-            name="Claims"
-            component={ReviewExpense}
-            options={{
-              headerShown: true,
-            }}
-          />
-          <Stack.Screen
-            name="Approvals"
-            component={Approvals}
-            options={{
-              headerShown: true,
-            }}
-          />
-          <Stack.Screen
-            name="Requests"
-            component={RequestExpense}
-            options={{
-              headerShown: true,
-            }}
-          />
+        name="Expenses"
+        component={ListExpense}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="Claims"
+        component={ReviewExpense}
+        options={{
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="Approvals"
+        component={Approvals}
+        options={{
+          headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name="Requests"
+        component={RequestExpense}
+        options={{
+          headerShown: true,
+        }}
+      />
     </Stack.Navigator>
   );
 };
