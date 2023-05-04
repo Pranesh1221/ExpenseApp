@@ -1,12 +1,17 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from "react-native";
 
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import { styles } from "./SignInStyle";
 import { useNavigation } from "@react-navigation/native";
 
 const Signin = (props) => {
   // const navigation = useNavigation();
-  const{navigation}=props
+  const { navigation } = props;
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, []);
   return (
     <View style={[styles.mainbox]}>
       <Text style={[styles.text]}>Expense App</Text>

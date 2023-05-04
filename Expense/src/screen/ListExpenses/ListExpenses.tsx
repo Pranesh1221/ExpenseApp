@@ -13,7 +13,6 @@ import {
 } from "@expo/vector-icons";
 import styles from "./ListExpensesStyle";
 
-
 const ListExpenses = () => {
   const navigation = useNavigation();
 
@@ -45,14 +44,18 @@ const ListExpenses = () => {
 
     setModalVisible(false);
   };
+  const handleCreate = () => {
+    navigation.navigate("ExpenseCreate");
+  };
 
   return (
     <View style={styles.container}>
-     {/* Your app content */}
+      {/* Your app content */}
       <TouchableOpacity
         onPress={() => setModalVisible(true)}
         style={styles.floatingButton}
-      ><Text style={styles.buttonText}>+</Text>
+      >
+        <Text style={styles.buttonText}>+</Text>
       </TouchableOpacity>
       <Modal
         visible={modalVisible}
@@ -66,15 +69,13 @@ const ListExpenses = () => {
         >
           <View style={styles.modalContent}>
             <TouchableOpacity style={styles.modalOption} onPress={handleModal}>
-          <Ionicons name="camera" size={25} color="#008fd3" />
-           
+              <Ionicons name="camera" size={25} color="#008fd3" />
+
               <Text style={styles.modalOptionText}>Add Expenselt</Text>
             </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.modalOption} // onPress={() => handleOptionClick(2)}
-            >
-            <Ionicons name="create" size={25} color="#008fd3" />
-            
+            <TouchableOpacity style={styles.modalOption} onPress={handleCreate}>
+              <Ionicons name="create" size={25} color="#008fd3" />
+
               <Text style={styles.modalOptionText}>Add Quick Expense</Text>
             </TouchableOpacity>
             <TouchableOpacity
@@ -98,7 +99,7 @@ const ListExpenses = () => {
         >
           <View style={styles.secondmodalContent}>
             <TouchableOpacity style={styles.modalOption}>
-             <Entypo name="camera" size={24} color="#008fd3" />
+              <Entypo name="camera" size={24} color="#008fd3" />
               <Text style={styles.modalOptionText}>Take Photo</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.modalOption}>

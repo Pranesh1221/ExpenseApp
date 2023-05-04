@@ -7,10 +7,9 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
-import React, { useLayoutEffect, useCallback, useState, useRef } from "react";
+import React, { useLayoutEffect } from "react";
 import { StatusBar } from "expo-status-bar";
 import { useNavigation } from "@react-navigation/native";
-
 
 import { Foundation, Ionicons } from "@expo/vector-icons";
 import styles from "./ExpenseCreateStyle";
@@ -18,9 +17,7 @@ import styles from "./ExpenseCreateStyle";
 const ExpenseCreate = () => {
   const navigation = useNavigation();
 
-  const handlePresentModel = () => {
-    
-  };
+  const handlePresentModel = () => {};
   useLayoutEffect(() => {
     navigation.setOptions({
       headerShown: true,
@@ -40,17 +37,16 @@ const ExpenseCreate = () => {
   return (
     <View>
       <ScrollView>
-       
-          <TouchableOpacity
-            onPress={handlePresentModel}
-            style={[styles.AddReceiptButton]}
-          >
-            <View style={[styles.AddReceiptIcon]}>
-              <Foundation name="page-add" size={45} color="white" />
-              <Text style={[styles.AddReceiptText]}>Add Receipt</Text>
-            </View>
-          </TouchableOpacity>
-      
+        <TouchableOpacity
+          onPress={handlePresentModel}
+          style={[styles.AddReceiptButton]}
+        >
+          <View style={[styles.AddReceiptIcon]}>
+            <Foundation name="page-add" size={45} color="white" />
+            <Text style={[styles.AddReceiptText]}>Add Receipt</Text>
+          </View>
+        </TouchableOpacity>
+
         <View>
           <StatusBar style="auto" backgroundColor="#008fd3" />
           <View>
@@ -116,6 +112,6 @@ const ExpenseCreate = () => {
       </ScrollView>
     </View>
   );
-}
+};
 
-export default ExpenseCreate
+export default ExpenseCreate;
