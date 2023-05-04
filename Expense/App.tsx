@@ -1,14 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
-import StackNavigation from "./src/Navigation/StackNavigation";
-import Login from "./src/screens/Login/Login";
-import Signin from "./src/screens/SignIn/SignIn";
-
+import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+import 'react-native-gesture-handler';
+import AuthNavigator from "./src/Navigations/AuthNavigator";
 export default function App() {
   return (
-    <>
-      <StackNavigation />
-    </>
+    <NavigationContainer>
+      <AuthNavigator/>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
